@@ -1,6 +1,7 @@
 package edu.illinois.elasticsearch;
 
 import java.io.IOException;
+
 import java.net.InetAddress;
 import java.util.Collections;
 import java.util.HashMap;
