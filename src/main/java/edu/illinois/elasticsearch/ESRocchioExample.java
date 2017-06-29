@@ -1,18 +1,10 @@
 package edu.illinois.elasticsearch;
 
 import java.io.IOException;
-
-import java.net.InetAddress;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.GnuParser;
-import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
 import org.apache.lucene.index.Fields;
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;
@@ -24,13 +16,10 @@ import org.elasticsearch.action.termvectors.MultiTermVectorsResponse;
 import org.elasticsearch.action.termvectors.TermVectorsRequest;
 import org.elasticsearch.action.termvectors.TermVectorsResponse;
 import org.elasticsearch.client.Client;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.index.query.QueryStringQueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
+//import org.elasticsearch.transport.client.PreBuiltTransportClient;
 
 import edu.gslis.textrepresentation.FeatureVector;
 
@@ -247,6 +236,7 @@ public class ESRocchioExample
     }
       
 	
+    /*
 	public static void main(String[] args) throws IOException, ParseException
 	{
 	
@@ -301,4 +291,5 @@ public class ESRocchioExample
 		transportClient.close();
 
 	}
+	*/
 }

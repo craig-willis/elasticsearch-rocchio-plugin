@@ -25,14 +25,15 @@ public class RocchioRestAction extends BaseRestHandler {
         controller.registerHandler(RestRequest.Method.GET, "/{index}/_expand", this);
     }
 
+    
     @Override
     protected RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException {
     	
     	String index = request.param("index");
     	String query = request.param("query");
     	
-    	String type = request.param("type");
-    	String field = request.param("field");
+    	String type = request.param("type", "dataset");
+    	String field = request.param("field", "_all");
     	double alpha = Double.parseDouble(request.param("alpha", "0.5"));
     	double beta = Double.parseDouble(request.param("beta", "0.5"));
     	double k1 = Double.parseDouble(request.param("k1", "1.2"));
@@ -58,7 +59,5 @@ public class RocchioRestAction extends BaseRestHandler {
             builder.endObject();
 	        channel.sendResponse(new BytesRestResponse(RestStatus.OK, builder));
 	    };
-
     }
-
 }
